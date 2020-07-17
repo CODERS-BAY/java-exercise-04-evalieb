@@ -30,16 +30,22 @@ public class Calculator {
         do {
             System.out.println("Would you like to make floating point calculations?");
             System.out.println("type y for yes and anything else for integer calculations");
-            //read in a String
+            //read in a String float or double?
             Scanner scanner = new Scanner(System.in);
             String text = scanner.nextLine();
             //Now we have to ask, if the user has put in a "y"
-            //parse text into an integer
-            int x = Integer.parseInt(text);
+
+            //is this text "y"
+            if (text.equals("y")){
+
+            }
 
             System.out.println("Please enter your first number");
-            int first =
+            int first = scanner.nextInt();
+            System.out.println("Please enter your secound number");
+            int secound = scanner.nextInt();
 
+            scanner.nextFloat();
 
 
 
@@ -66,8 +72,6 @@ public class Calculator {
 
         } while (!terminate);
 
-
-    }
         String block = """
                 You can make the following calculations:
                 1.   addition
@@ -78,6 +82,12 @@ public class Calculator {
                     
                 To select a calculation please press the corresponding number.
           """;
+        System.out.println(block);
+
+    }
 
 
 }
+
+//parse text into an integer
+//int x = Integer.parseInt(text);
