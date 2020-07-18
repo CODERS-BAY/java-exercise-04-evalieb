@@ -1,9 +1,7 @@
 import java.util.Scanner;
 
 public class Calculator {
-    //x  and y as a global
-    private float x;
-    private float y;
+
     //functios for float
     private static float addition (float x, float y){
         return x+y;
@@ -63,10 +61,13 @@ public class Calculator {
 
             //is this text "y", if user wants to use float
             if (text.equals("y")){
+                System.out.println("You decided to make a float calculation. Please use ',' for decimal");
                 System.out.println("Please enter your first number");
                 float first = scanner.nextFloat();
+                System.out.println("x = " + first);
                 System.out.println("Please enter your secound number");
                 float secound = scanner.nextFloat();
+                System.out.println("y = " + secound);
                 System.out.println(block);
                 int correspondingNumber = scanner.nextInt();
 
@@ -101,8 +102,10 @@ public class Calculator {
             }else {
                 System.out.println("Please enter your first number");
                 int first = scanner.nextInt();
+                System.out.println("x = " + first);
                 System.out.println("Please enter your secound number");
                 int secound = scanner.nextInt();
+                System.out.println("y = " + secound);
                 System.out.println(block);
                 int correspondingNumber = scanner.nextInt();
 
@@ -125,7 +128,7 @@ public class Calculator {
                         System.out.println("The solution is " + moduloInt(first, secound));
                         break;
                     case 5:
-                        System.out.println("Calculating c = sqrt(" + first + "^2 + " + secound + "°2)");
+                        System.out.println("Calculating c = sqrt(" + first + "^2 + " + secound + "^2)");
                         System.out.println("The solution is " + pythagorasInt(first, secound));
                         break;
                     //If there was no input like 1, 2, 3, 4, 5 or 6
@@ -136,10 +139,10 @@ public class Calculator {
 
             }
 
-
             //System.out.println(again);
             System.out.println("Would you like to calculate again?");
             System.out.println("Press y for yes or any other key for abort.");
+            scanner.nextLine();
             String onesMore = scanner.nextLine();
 
           if(!onesMore.equals("y")){
