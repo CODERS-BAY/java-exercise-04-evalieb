@@ -1,13 +1,10 @@
 import java.util.Scanner;
 
 public class Calculator {
-    /*
-        your code comes here...
-     */
-
-    //x as a global
-
-
+    //x  and y as a global
+    private float x;
+    private float y;
+    //functios for float
     private static float addition (float x, float y){
         return x+y;
     }
@@ -23,6 +20,7 @@ public class Calculator {
     private static float pythagoras (float x, float y){
         return ((x*x) + (y*y));
     }
+    //functions for integer
     private static int additionInt (int x, int y){
         return x+y;
     }
@@ -38,6 +36,7 @@ public class Calculator {
     private static int pythagorasInt (int x, int y){
         return ((x*x) + (y*y));
     }
+
     private static String block = """
          You can make the following calculations:
             1.   addition
@@ -73,15 +72,25 @@ public class Calculator {
 
                 switch(correspondingNumber)
                 {
-                    case 1: System.out.println("The solution is " + addition(first, secound));
+                    case 1:
+                        System.out.println("Calculating: " + first + " + " + secound);
+                        System.out.println("The solution is " + addition(first, secound));
                             break;
-                    case 2: System.out.println("The solution is " + subtraction(first, secound));
+                    case 2:
+                        System.out.println("Calculating: " + first + " - " + secound);
+                        System.out.println("The solution is " + subtraction(first, secound));
                             break;
-                    case 3: System.out.println("The solution is " + divide(first, secound));
+                    case 3:
+                        System.out.println("Calculating: " + first + " / " + secound);
+                        System.out.println("The solution is " + divide(first, secound));
                             break;
-                    case 4: System.out.println("The solution is " + modulo(first, secound));
+                    case 4:
+                        System.out.println("Calculating: " + first + " % " + secound);
+                        System.out.println("The solution is " + modulo(first, secound));
                             break;
-                    case 5: System.out.println("The solution is " + pythagoras(first, secound));
+                    case 5:
+                        System.out.println("Calculating c = sqrt(" + first + "^2 + " + secound + "°2)");
+                        System.out.println("The solution is " + pythagoras(first, secound));
                             break;
                             //??
                     default:
@@ -99,23 +108,34 @@ public class Calculator {
 
                 switch(correspondingNumber)
                 {
-                    case 1: System.out.println("The solution is " + additionInt(first, secound));
+                    case 1:
+                        System.out.println("Calculating: " + first + " + " + secound);
+                        System.out.println("The solution is " + additionInt(first, secound));
                         break;
-                    case 2: System.out.println("The solution is " + subtractionInt(first, secound));
+                    case 2:
+                        System.out.println("Calculating: " + first + " - " + secound);
+                        System.out.println("The solution is " + subtractionInt(first, secound));
                         break;
-                    case 3: System.out.println("The solution is " + divideInt(first, secound));
+                    case 3:
+                        System.out.println("Calculating: " + first + " / " + secound);
+                        System.out.println("The solution is " + divideInt(first, secound));
                         break;
-                    case 4: System.out.println("The solution is " + moduloInt(first, secound));
+                    case 4:
+                        System.out.println("Calculating: " + first + " % " + secound);
+                        System.out.println("The solution is " + moduloInt(first, secound));
                         break;
-                    case 5: System.out.println("The solution is " + pythagorasInt(first, secound));
+                    case 5:
+                        System.out.println("Calculating c = sqrt(" + first + "^2 + " + secound + "°2)");
+                        System.out.println("The solution is " + pythagorasInt(first, secound));
                         break;
-                    //??
+                    //If there was no input like 1, 2, 3, 4, 5 or 6
                     default:
                         System.out.println("This was a bad choice");
                         break;
                 }
 
             }
+
 
             //System.out.println(again);
             System.out.println("Would you like to calculate again?");
